@@ -14,10 +14,12 @@ public class Character {
     private int Con;
     private int Int;
 
+    Dice dice = new Dice();
+
     public Character(String name,String characterType,int level){
         this.name = name;
         this.characterType = characterType;
-        this.level = level
+        this.level = level;
     }
 
     String getAbilityModifier(int abilityScore){
@@ -48,7 +50,7 @@ public class Character {
     }
 
     int rollStat(){
-        Dice dice = new Dice();
+        dice.clear();
         dice.addDie(4,6);
         dice.rollAll();
         ArrayList<Integer> values = new ArrayList<Integer>();
@@ -89,4 +91,3 @@ public class Character {
     }
 
 }
-
