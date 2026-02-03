@@ -4,7 +4,7 @@ public class Character {
 
     private String name;
     private String characterType;
-    private int level = 1;
+    private int level;
     private int healthPoints;
     private int armorClass;
     private int Str;
@@ -14,10 +14,10 @@ public class Character {
     private int Con;
     private int Int;
 
-    public Character(String name,String characterType){
+    public Character(String name,String characterType,int level){
         this.name = name;
         this.characterType = characterType;
-
+        this.level = level
     }
 
     String getAbilityModifier(int abilityScore){
@@ -89,3 +89,4 @@ public class Character {
     }
 
 }
+
